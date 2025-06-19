@@ -1,0 +1,164 @@
+Dear TPHOLs 2009 Participant,
+
+We would like to thank you for registering for TPHOLs 2009 and already
+welcome you in Munich. In the following, we will provide you with some
+useful information for your arrival and stay in Munich. More detailed
+information can be found in the conference brochure available for
+download at
+
+  http://tphols.in.tum.de/conference_info.pdf
+
+If you have any questions that are not answered herein, please do not
+hesitate to contact us.
+
+Have a safe journey, and see you soon in Munich!
+
+The TPHOLs 2009 Organizing Team
+
+
+CONFERENCE VENUE
+
+The conference will take place at the Novotel Muenchen City. The contact
+information of the hotel is: 
+
+  Novotel Muenchen City
+  Hochstrasse 11
+  81669 Muenchen
+  Germany
+
+  Tel: +49 89 661070
+  Fax: +49 89 66107999
+  EMail: h3280@accor.com
+  Web: http://www.novotel.com/gb/hotel-3280-novotel-muenchen-city/index.shtml
+
+The nearest stop of public transportation (S-Bahn) is Rosenheimer Platz. For
+detailed travel information see separate section. Also note that the conference
+centre is located in a separate building, reachable by a short walk from the
+lobby of the hotel.
+
+WELCOME RECEPTION
+
+There will be a welcome reception on Sunday, August 16th, from 18:00 to 20:00.
+It will take place in the restaurant "Le Jardin" in the conference hotel.
+
+REGISTRATION
+
+A registration desk will be open during the reception on Sunday and also on all
+days during the conference.
+
+PRESENTATIONS
+
+We will provide a laptop with Microsoft PowerPoint and Acrobat Reader. We
+strongly advise presenters to send us their slides by Friday, August 14th,
+to allow us enough time for making a test and uploading them for the
+respective session.
+Of course you can also bring your own laptop, but we would prefer to use
+a single laptop in order to reduce the time needed to set up the 
+presentations.
+
+POSTERS
+
+For the poster session on Tuesday, August 18th, panels that can accommodate
+posters in A1 format will be available. The poster will be attached to the
+panel with pins, which will be provided by us.
+
+LUNCH BREAKS
+
+Lunch and coffee will be provided during all conference and workshop days. 
+Lunch will be served in the restaurant "Le Jardin" in the hotel.
+
+INTERNET ACCESS
+
+Free WLAN access will be provided at the conference centre from August 17th
+until 21st. The name of the network is "m3connect" (but "novotel" and "vodafone"
+should work as well). The network parameters are configured via DHCP. 
+Note that the WLAN is a shared medium, meaning that the available capacity is
+shared among all users, and each of the access points in the conference centre
+can only handle a fixed number of connections at the same time. We therefore
+kindly ask you to refrain from using any bandwidth-hungry applications, such
+as video streaming, and from downloading large files. Please also disconnect
+from the network whenever you do not need it.
+A cable-based Internet access is available in the rooms of Novotel for an
+extra fee. 
+
+PROCEEDINGS
+
+Hardcopies of the conference proceedings will be available at the registration
+desk. The LNCS number of the proceedings is 5674. Moreover, ten hardcopies of
+the Emerging Trends proceedings will be available at the registration desk.
+The Emerging Trends proceedings can also be downloaded from
+
+  http://tphols.in.tum.de/emerging-trends-TUM-I0916.pdf
+
+EXCURSION AND BANQUET
+
+On Wednesday, August 19th from 13:00 to about 00:15, there will be an excursion
+to the lake Starnberg including a boat cruise, followed by the conference banquet.
+
+COQ AND PLMMS WORKSHOPS
+
+The workshops will take place on Friday, August 21st, at the same location as
+the main conference. More information on the workshops can be found on the web
+site of the conference.
+
+TRAVEL
+
+ARRIVING BY PLANE
+
+Munich airport is located about 35km from the city centre. The airport has two
+terminals that are adjacent to each other. From the airport, you can take a taxi
+to the hotel, but it is a very expensive ride (> EUR 50).
+
+Our advice is to take the cheaper option of public transportation using the
+S-Bahn. These are local trains that depart from the central area of the
+airport every 20 mins and run from 4 o'clock in the morning until past
+midnight. Follow the "S-Bahn" sign to the trains. You have to take the
+train labelled S8 (yellow-and-black line in the map below):
+
+  http://www.munich-airport.de/en/consumer/anab/bahn/index.jsp
+
+It is not recommended to take the S1 to the city centre: it brings you there
+as well, but it takes a large detour. A plan of the whole public transportation
+network of Munich can be downloaded in PDF from
+
+  http://www.mvv-muenchen.de/web4archiv/objects/download/3/schnellbahnnetz_2009.pdf
+
+If you are staying at the conference hotel, you have to get off at Rosenheimer
+Platz (10 stops from the airport) and just follow the signs to the Novotel.
+The trip from the airport to the hotel takes about 35 mins. You can query the
+timetable and journey planner for the trip from the airport to the city centre at
+
+  http://www.mvv-muenchen.de/en/home/passengeraeinformation/airtravellers/index.html
+
+PURCHASING TRAIN TICKETS
+
+Before taking the train, you have to purchase and validate your ticket. In
+front of the entrance to the platform there is a ticket counter, which is
+staffed during working hours, and automatic ticket machines. If you use the
+machines you need to have enough coins or sufficiently small bank notes. The
+machines give change. The sales people at the ticket counter also accept credit
+cards (the sales people should be able to speak English).
+
+If you plan to travel straight to the conference hotel, you have to purchase a
+single ticket ("Einzelfahrkarte") 4 zones, valid for only one trip, price EUR 9.20
+
+If on the arrival day you plan to go somewhere else, you can also buy
+a single day ticket for the entire network ("Single-Tageskarte Gesamtnetz"),
+price EUR 10.00
+
+If you happen to travel together with up to four colleagues, you can save money
+by buying a partner day ticket for the entire network ("Partner-Tageskarte
+Gesamtnetz"), price EUR 18.00
+
+Do not forget to validate the tickets before travelling! You can validate your
+ticket by inserting it into one of the small blue machines close to the entrance
+of the platform, which print the current date and time on the ticket.
+
+ARRIVING BY TRAIN
+
+Most of the intercity trains either arrive at Hauptbahnhof or at Ostbahnhof. From
+Hauptbahnhof, you can take any S-Bahn in the direction of Ostbahnhof. If you are
+staying at the conference hotel, you have to get off at Rosenheimer Platz. If your
+train arrives at Ostbahnhof, get off there and take any S-Bahn in the direction of
+the city centre / Hauptbahnhof. Note that Rosenheimer Platz is already the next
+stop after Ostbahnhof. See above for information about ticket purchases.

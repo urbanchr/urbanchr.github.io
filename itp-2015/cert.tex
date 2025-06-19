@@ -1,0 +1,75 @@
+\documentclass[12pt, pagenumber=false, parskip=half,% 
+               fromalign=right, fromphone=false,%  
+               fromemail=false, fromurl=false,%
+               fromlogo=false, fromrule=false,%
+               backaddress=false, %
+               foldmarks=false]{scrlttr2}
+%%%%%%%%%%%%%%%%%%%%
+% fromalign = right (right, center) -  Absenderfeld  formatiert.
+% fromrule = afteraddress, false, aftername -  ein Linie wird nach  der Adresse gesetzt.
+% backaddress = true (false) - Setzen einer RÃ¼cksendeadresse fÃ¼r FensterumschlÃ¤ge
+% fromphone   = true         - Setzen der Telefonnummer des Absenders
+% fromemail   = true         - Setzen der eMail-Adresse des Absenders
+% fromurl     = true         - Setzen einer Homepageadresse des Absenders
+% fromlogo    = true         - Absenderlogo (Firmenlogo) wird in den Brief eingefÃ¼gt
+%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{textcomp}
+\usepackage{ulem}
+\usepackage{times}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+
+
+\renewcommand*{\raggedsignature}{\raggedright}
+\setkomavar{fromname}{Dr~Christian Urban}
+\setkomavar{fromaddress}{Department of Informatics\\
+  King's College London\\
+  Strand, London WC2R 2LS\\
+  United Kingdom}
+\setkomavar{signature}{Dr Christian Urban\\ co-chair of the ITP 2015 conference}
+
+
+\makeatletter
+\@addtoplength{firstheadvpos}{20mm}
+\makeatother
+
+\begin{document}
+\def\adrentry#1#2#3
+{\begin{letter}{\mbox{}}
+\opening{\bigskip\textbf{Certificate for the Registration Fee for the ITP 2015 Conference in Nanjing}}
+
+\bigskip
+This is to certify that 
+
+\begin{center}
+\textbf{#1}
+\end{center}
+
+\noindent paid
+
+\begin{flushright}
+\begin{tabular}{l@{\hspace{5mm}}r}
+Total: & \uuline{#2}\\
+\end{tabular}
+\end{flushright}
+
+\noindent 
+\if #30{for the International Conference on Interactive Theorem Proving, which took place
+from 24th until 27th of August in Nanjing, China.} \fi
+\if #31{for the International Conference on Interactive Theorem Proving and the Isabelle Tutorial, 
+which both took place from 21st until 27th of August in Nanjing, China.} \fi 
+\if #32{for the International Conference on Interactive Theorem Proving and the Coq Tutorial, 
+which both took place from 24th until 29th of August in Nanjing, China.} \fi 
+\if #33{for the International Conference on Interactive Theorem Proving, as well as the 
+Isabelle and Coq Tutorials, which all took place from 21th until 29th of August in Nanjing, China.} \fi 
+
+\bigskip\bigskip\bigskip
+
+\closing{\noindent{}Yours sincerely,\bigskip\mbox{}}
+\end{letter}
+
+}
+\input{participants.db}
+\end{document}

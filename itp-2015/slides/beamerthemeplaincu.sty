@@ -1,0 +1,118 @@
+%%\Providespackage{beamerthemeplainculight}[2003/11/07 ver 0.93]
+\NeedsTeXFormat{LaTeX2e}[1995/12/01]
+
+% Copyright 2003 by Till Tantau <tantau@cs.tu-berlin.de>.
+%
+% This program can be redistributed and/or modified under the terms
+% of the LaTeX Project Public License Distributed from CTAN
+% archives in directory macros/latex/base/lppl.txt.
+ 
+\newcommand{\slidecaption}{}
+
+\mode<presentation>
+
+\usepackage{fontspec}
+\usefonttheme{serif}
+\defaultfontfeatures{Ligatures=TeX}
+\setromanfont{Hoefler Text}
+\setmonofont[Scale=MatchLowercase]{Consolas}
+\newfontfamily{\consolas}{Consolas}
+\newcommand{\tttext}[1]{{\consolas{#1}}}
+%%\setttfont{Lucida Console}
+%%\setmainfont[Mapping=tex-text]{Hoefler Text}
+
+%%\renewcommand\ttdefault{lmtt}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% comic fonts fonts
+%\DeclareFontFamily{T1}{comic}{}%
+%\DeclareFontShape{T1}{comic}{m}{n}{<->s*[.9]comic8t}{}%
+%\DeclareFontShape{T1}{comic}{m}{it}{<->s*[.9]comic8t}{}%
+%\DeclareFontShape{T1}{comic}{m}{sc}{<->s*[.9]comic8t}{}%
+%\DeclareFontShape{T1}{comic}{b}{n}{<->s*[.9]comicbd8t}{}%
+%\DeclareFontShape{T1}{comic}{b}{it}{<->s*[.9]comicbd8t}{}%
+%\DeclareFontShape{T1}{comic}{m}{sl}{<->ssub * comic/m/it}{}%
+%\DeclareFontShape{T1}{comic}{b}{sc}{<->sub * comic/m/sc}{}%
+%\DeclareFontShape{T1}{comic}{b}{sl}{<->ssub * comic/b/it}{}%
+%\DeclareFontShape{T1}{comic}{bx}{n}{<->ssub * comic/b/n}{}%
+%\DeclareFontShape{T1}{comic}{bx}{it}{<->ssub * comic/b/it}{}%
+%\DeclareFontShape{T1}{comic}{bx}{sc}{<->sub * comic/m/sc}{}%
+%\DeclareFontShape{T1}{comic}{bx}{sl}{<->ssub * comic/b/it}{}%
+%
+%\renewcommand{\rmdefault}{comic}%
+%\renewcommand{\sfdefault}{comic}%
+\renewcommand{\mathfamilydefault}{cmr}% mathfont should be still the old one
+%
+\DeclareMathVersion{bold}% mathfont needs to be bold
+\DeclareSymbolFont{operators}{OT1}{cmr}{b}{n}%
+\SetSymbolFont{operators}{bold}{OT1}{cmr}{b}{n}%
+\DeclareSymbolFont{letters}{OML}{cmm}{b}{it}%
+\SetSymbolFont{letters}{bold}{OML}{cmm}{b}{it}%
+\DeclareSymbolFont{symbols}{OMS}{cmsy}{b}{n}%
+\SetSymbolFont{symbols}{bold}{OMS}{cmsy}{b}{n}%
+\DeclareSymbolFont{largesymbols}{OMX}{cmex}{b}{n}%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Frametitles
+
+\setbeamerfont{frametitle}{size={\LARGE}}
+\setbeamerfont{frametitle}{family={\fontspec{Hoefler Text Black}}}
+%\setbeamerfont{frametitle}{family={\usefont{T1}{ptm}{b}{n}}
+\setbeamercolor{frametitle}{fg=ProcessBlue,bg=white}
+
+\setbeamertemplate{frametitle}{%
+\vskip 2mm  % distance from the top margin
+\hskip -3mm % distance from left margin
+\vbox{%
+\begin{minipage}{1.05\textwidth}%
+\centering%
+\insertframetitle%
+\end{minipage}}%
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Foot
+%
+\setbeamertemplate{navigation symbols}{} 
+\usefoottemplate{%
+\vbox{%
+  \tinyline{%
+    \tiny\hfill\textcolor{gray!50}{\slidecaption{} --
+      p.~\insertframenumber/\inserttotalframenumber}}}%
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\beamertemplateballitem
+\setlength\leftmargini{2mm}
+\setlength\leftmarginii{0.6cm}
+\setlength\leftmarginiii{1.5cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% blocks
+%\definecolor{cream}{rgb}{1,1,.65}
+\definecolor{cream}{rgb}{1,1,.8}
+\setbeamerfont{block title}{size=\normalsize}
+\setbeamercolor{block title}{fg=black,bg=cream}
+\setbeamercolor{block body}{fg=black,bg=cream}
+
+\setbeamertemplate{blocks}[rounded][shadow=true]
+
+\setbeamercolor{boxcolor}{fg=black,bg=cream}
+
+\mode
+<all>
+
+
+
+
+
+
