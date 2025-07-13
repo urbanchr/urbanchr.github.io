@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Isabelle Programming Tutorial</title>
+  <link rel="stylesheet" href="nominal.css">
+</head>
+
+<body>
+<div align="center">
+<table width="95%">
+<tbody>
+<tr>
+<td align="left">
+<H1>Aim</H1>
+ 
+
+There is already quite good documentation available for users to learn
+how to interact with Isabelle and to use it for proving
+theorems (see <A HREF="http://www.cl.cam.ac.uk/research/hvg/Isabelle/documentation.html" target="_top">here</A>).
+However, the entry barrier for users to program on the ML-level of Isabelle
+is still unbearably high. In this project we want to change this state
+of affairs by providing a <i>tutorial</i> about ML-coding in Isabelle. 
+At its centre we describe the 
+implementation of a simple prototypical Isabelle package (we describe
+a simplified version of the inductive package). We hope by 
+documenting every aspect of this package that in the future you will 
+be able to modify, extend and adapt this package for your own purposes, 
+see how developers code in Isabelle and understand better Isabelle's 
+idiosyncrasies. As a result you will be able to quickly produce code 
+for your own needs and will be able to participate in keeping Isabelle 
+alive in the long run. 
+
+<p>
+Specific topics of the tutorial we have not yet covered: 
+
+<P>
+<ul>
+<li> First Steps
+<ul> 
+<li>theories, contexts and local theories
+<li>morphisms
+<li>name spaces
+</ul>
+<li>Parsing
+<ul>
+<li>context-, argument- and attribute parsers
+<li>parsing and printing translations
+<li>methods
+</ul>
+<li>Tactical Reasoning
+<ul>
+<li>declarations
+<li>structured proofs
+</ul>
+<li>Advanced Stuff
+<ul> 
+<li>user-space type-systems
+<li>typing algorithms
+<li>external applications
+</ul>
+</ul>
+<P>
+
+Please help us to expand on this list. 
+
+<H3>We need You</H3>
+
+We need help for accomplishing this tutorial. If you are familiar with the 
+ML-level of Isabelle, please get in contact with us (see addresses below). If you 
+are not familiar, but like to know more about the bits and pieces that make
+up the Isabelle code, then let us know what you are interested in or what
+project you like to implement. Above all we like to help future users and 
+developers of Isabelle; we do not want to end up with some "artificial documentation" 
+that is of nobody's help. Also proofreading and feedback would be most
+appreciated.
+
+<H3>Contact</H3>
+
+I am trying to stay on top of things, but no promises:
+
+<ul>
+<li> <A HREF="https://urbanchr.github.io/" target="_top">Christian Urban</A> (christian.urban at kcl ac uk)
+</ul>
+
+There is also the following mailing list that is subscribed by all developers
+and open for help, suggestions etc. about this project.
+
+<ul>
+<li><A HREF="https://mailmanbroy.informatik.tu-muenchen.de/mailman/listinfo/isabelle-dev">isabelle-dev@mailman46.in.tum.de</A>
+</ul>
+
+
+<H3>Repository</H3>
+
+A 
+<A HREF="https://cflmark.nms.kcl.ac.uk/hg/isabelle-cookbook/" target="_top">repository</A>
+is available and you are very welcome to contribute to it. The current draft of the tutorial is <A HREF="https://cflmark.nms.kcl.ac.uk/hg/isabelle-cookbook/raw-file/tip/progtutorial.pdf">here</A>. 
+
+<H3>Stable Version</H3>
+
+There is no real stable version of the Programming Tutorial yet. If you need a version 
+that is guaranteed to work with a stable version of Isabelle, then please get in touch with me 
+(christian.urban at kcl ac uk).
+
+
+<H3><A NAME="readers"></A>What early readers said:</H3>
+
+<p>
+<i>
+My path towards HOL was from HOL Light, to HOL4, to Isabelle/HOL and
+the Cookbook was essential for the last step (Piotr Trojanek, University of Bristol, 2014)
+</i>
+
+<p>
+<i>
+...and the Isabelle/ML Cookbook are valuable resources (Lars Hupel, 2014)
+</i>
+
+<p>
+<i>
+GREAT!!! That's exactly what I was looking for! (Thomas Genet, ISTIC/IRISA, 2012)
+</i>
+
+<p>
+<i>
+The tutorial really is quite nice. (Jeremy Avigad, CMU, 2011)
+</i>
+
+<p>
+<i>
+By the way, thanks for the Isabelle Cookbook, it's really helpful to 
+start with Isabelle/ML. (Mathieu Giorgino, 2011)
+</i>
+
+<p>
+<i>
+Great!  This seems to have a lot of the missing pieces I couldn't find  
+in the tutorial and reference manual. (Kevin Van Horn, 2011)
+</i>
+
+<p>
+<i>
+I've been fighting for hours trying to derive some theorems automatically, 
+until Florian told me I should try using conversions and then I read the Cookbook 
+section and it solved my problem. The example with abs_conv in particular was 
+particularly illuminating. Thanks! (Jasmin Blanchette, TU Munich, 2010)
+</i>
+
+<p>
+<i> The cook book seems really helpful, if not even exactly what I need. 
+(Nils J&auml;hnig, FU Berlin, 2010)</i>
+
+<p>
+<i>The Programming Tutorial has helped me tremendously to get familiar with
+Isabelle, which I used in my bachelor thesis about the type-inference algorithm 
+in Isabelle. (Dmitriy Traytel, TU Munich, 2010)</i>
+
+<p>
+<i>I've already pointed a couple of PhD students at the programming tutorial, and
+they've already found it to be a great place to start with Isabelle
+programming. (Lucas Dixon, University of Edinburgh, 2009)</i> 
+
+<p>
+<i>The Isabelle Programming Tutorial is great! I finally learned how to add 
+new keywords and how to parse outer syntax! (Amine Chaieb, University of Cambridge)</i>
+
+<p>
+<i>I felt the programming tutorial was very clear and comprehensible. I'm
+toying with actually getting back to Isabelle again. Thanks to 
+everyone involved in the documentation project. I really think it
+is worthwhile. (Tom Ridge, University of Cambridge, 2009)</i>
+
+<p>
+<i>I learned from the tutorial how to deal with fresh variables and also which function to use for applying substitutions that are generated by unification.
+(Lukas Bulwahn, TU Munich, 2009)</i>
+
+
+<p>
+<i> What a great resource! I wish I'd had this when I wrote my first
+parser in December 2008. (Timothy Bourke, UNSW Sydney, 2009)</i>
+
+</td>
+</tr>
+</tbody>
+</table>
+</div>     
+ 
+
+
+</body>
+</html>
+
