@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" 
+"http://www.w3.org/TR/REC-html40/loose.dtd"> 
+<HEAD>
+<TITLE>Nominal Unification</TITLE>
+<BASE HREF="http://www4.in.tum.de/~urbanc/Unification">
+</HEAD>
+
+<BODY TEXT="#000000" 
+      BGCOLOR="#4169E1" 
+      LINK="#0000EF" 
+      VLINK="#51188E" 
+      ALINK="#FF0000">
+
+<TABLE WIDTH="100%" 
+       BGCOLOR="#4169E1" 
+       BORDER="0"   
+       FRAME="border"  
+       CELLPADDING="10"     
+       CELLSPACING="2"
+       RULES="all">
+
+<!-- right column -->
+<TR>
+<TD BGCOLOR="#FFFFFF" WIDTH="75%">
+<H2>Nominal Unification [<a HREF="http://www4.in.tum.de/~urbanc/Unification/nomu-tcs.ps">ps</a>]</H2>
+ 
+<A HREF="http://www4.in.tum.de/~urbanc/">Christian Urban</A>,
+<A HREF="http://www.cl.cam.ac.uk/~amp12/">Andrew Pitts</A>,
+Murdoch Gabbay
+<p>
+    We present a generalisation of first-order unification to the
+    practically important case of equations between terms involving
+    <i>binding operations</i>. A substitution of terms for variables
+    solves such an equation if it makes the equated terms
+    <i>alpha-equivalent</i>, i.e. equal up to renaming bound names.
+    For the applications we have in mind, we must consider the simple,
+    textual form of substitution in which names occurring in terms may
+    be captured within the scope of binders upon substitution.  We are
+    able to take a "nominal" approach to binding in which bound
+    entities are explicitly named (rather than using nameless,
+    de Bruijn-style representations) and yet get a version of this
+    form of substitution that respects alpha-equivalence and
+    possesses good algorithmic properties. We achieve this by adapting
+    an existing idea and introducing a key new idea.  The existing
+    idea is terms involving explicit substitutions of names for names,
+    except that here we only use <i>explicit permutations</i>
+
+    (bijective substitutions).  The key new idea is that the
+    unification algorithm should solve not only equational problems,
+    but also problems about the <i>freshness</i> of names for
+    terms. There is a simple generalisation of the classical
+    first-order unification algorithm to this setting which retains
+    the latter's pleasant properties: unification problems involving
+    alpha-equivalence and freshness are decidable; and solvable
+    problems possess most general solutions.  
+<BR><BR>
+
+In an <a HREF="http://www4.in.tum.de/~urbanc/Unification/app-nomu.ps">appendix</a> we
+discuss some issues about the relationship between nominal unification and higher-order
+pattern unification. 
+
+<BR><BR><BR><BR>
+All results in the paper have been verified in 
+<A HREF="http://www.cl.cam.ac.uk/Research/HVG/Isabelle/">Isabelle</A> (2004 version). 
+Below are the theory files.
+
+<ul>
+<li><A HREF="Unification/Swap.thy">Swap.thy</A>
+    <br /> amongst other facts proves that swapping is a bijection (on atoms)
+<li><A HREF="Unification/Atoms.thy">Atoms.thy</A>
+    <br /> facts about atoms occurring in swappings
+<li><A HREF="Unification/Terms.thy">Terms.thy</A>
+    <br /> defines terms, occurs check and the notion of subterms
+<li><A HREF="Unification/Disagreement.thy">Disagreement.thy</A>
+    <br /> proves various facts about disagreement sets
+<li><A HREF="Unification/Fresh.thy">Fresh.thy</A>
+    <br /> defines the freshness relation and shows facts about its behaviour under swapping
+<li><A HREF="Unification/PreEqu.thy">PreEqu.thy</A>
+    <br /> defines the relation capturing the notion of alpha-equivalence (on open terms) 
+           and proves a long lemma by mutual induction over the depth of terms which
+           is needed to show that the relation is an equivalence relation
+<li><A HREF="Unification/Equ.thy">Equ.thy</A>
+    <br />  proves various facts about the equivalence relations
+<li><A HREF="Unification/Substs.thy">Substs.thy</A>
+    <br />  defines substitutions and composition of substitutions, and establishes
+            some facts of substitution and our equivalence relation
+<li><A HREF="Unification/Mgu.thy">Mgu.thy</A>
+    <br />  defines the notion of unification problems and reduction rules over sets 
+            of such problems; proves that every reduction leading to the empty set 
+            produces an mgu 
+<li><A HREF="Unification/Termination.thy">Termination.thy</A>
+    <br />  shows that every reduction reduces a (well-founded) measure, thus
+            proves that every reduction sequence must terminate
+<li><A HREF="Unification/Unification.thy">Unification.thy</A>
+    <br />  proves that all solvable problems reduce only to the empty set 
+            (the "ok" configuration which provides an mgu) and all unsolvable
+            problems reduce to a "fail" configuration 
+            (for which no unifier exists)
+</uL><BR>
+The old Isabelle-2002 files can be downloaded 
+<A HREF="http://www4.in.tum.de/~urbanc/Unification/nomu-2002.tgz">here</A>.
+<BR><BR>
+A "quick and dirty" implementation of nominal unification in 
+<A HREF="http://caml.inria.fr/">Ocaml</A> can be 
+downloaded 
+<A HREF="http://www4.in.tum.de/~urbanc/Unification/unification.ml">elsewhere</A>.
+
+
+<BR><BR><BR><BR>
+
+</TABLE>
+<P><!-- Created: Tue Mar  4 00:23:25 GMT 1997 -->
+<!-- hhmts start -->
+Last modified: Thu Feb 28 20:24:23 CET 2008
+<!-- hhmts end -->
+<a href="http://validator.w3.org/check/referer">[Validate this page.]</a>
+</BODY>
+</HTML>
