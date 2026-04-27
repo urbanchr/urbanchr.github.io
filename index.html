@@ -1,409 +1,494 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<HEAD>
-<TITLE>Homepage of Christian Urban</TITLE>
-<BASE HREF="https://urbanchr.github.io/">
-<script type="text/javascript">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christian Urban - Homepage</title>
+  <style>
+    :root {
+      --primary: #2c3e50;
+      --accent: #3498db;
+      --accent-dark: #2980b9;
+      --bg: #f8f9fa;
+      --card-bg: #ffffff;
+      --text: #333333;
+      --text-light: #666666;
+      --border: #e0e0e0;
+      --sidebar-width: 280px;
+    }
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-4143458-4']);
-  _gaq.push(['_trackPageview']);
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
-</HEAD>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
 
-<BODY TEXT="#000000" 
-      BGCOLOR="#4169E1" 
-      LINK="#0000EF" 
-      VLINK="#51188E"  
-      ALINK="#FF0000">
-<font face='Optima'>
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
 
-<TABLE WIDTH="100%" 
-       BGCOLOR="#4169E1" 
-       BORDER="0"   
-       FRAME="border"  
-       CELLPADDING="11"     
-       CELLSPACING="2"
-       RULES="all">
+    a:hover {
+      color: var(--accent-dark);
+      text-decoration: underline;
+    }
 
-<!-- left column -->
-<TR>
-<TD BGCOLOR="#FFFFFF" 
-    WIDTH="24%" 
-    VALIGN="TOP" 
-    ROWSPAN="9">
+    /* ── Layout ── */
+    .page-wrapper {
+      display: flex;
+      min-height: 100vh;
+    }
 
-<B>Links</B><BR>
-<A HREF="https://urbanchr.github.io/index.html">Home</A><BR>
-<A HREF="https://urbanchr.github.io/publications.html">Publications</A><BR>
-<A HREF="https://urbanchr.github.io/teaching.html">Teaching</A><BR>
-<A HREF="https://urbanchr.github.io/travelling.html">Recent Talks</A><BR>
-<A HREF="https://urbanchr.github.io/Nominal/">Nominal Isabelle</A>
-<BR>
-<BR>
+    /* ── Sidebar ── */
+    .sidebar {
+      width: var(--sidebar-width);
+      background: var(--primary);
+      color: #ffffff;
+      padding: 40px 28px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      overflow-y: auto;
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+    }
 
-<B>Handy Information</B><BR>
-<A HREF="https://urbanchr.github.io/logic.html">People in Logic</A><BR> 
-<A HREF="https://urbanchr.github.io/programming.html">Programming Languages</A><BR> 
-<A HREF="https://urbanchr.github.io/misc.html">Miscellaneous</A>
-<BR><BR>
+    .sidebar h2 {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: rgba(255,255,255,0.5);
+      margin: 24px 0 8px 0;
+    }
 
-<table border="0">
-<tr>
-<td>
-<A HREF="https://urbanchr.github.io/Nominal/">
-<IMG SRC="nominal-logo.gif" ALT="" style="border-width: 0px;" align="left"></A>
-</td>
-</tr>
-<tr>
-<td>
-<A HREF="https://urbanchr.github.io/Cookbook/">
-<IMG SRC="Cookbook/logo-documentation.gif" ALT="" style="border-width: 0px;" align="left"></A>
-</td>
-</tr>
-</table>
-</TD>
+    .sidebar h2:first-child {
+      margin-top: 0;
+    }
 
+    .sidebar nav a {
+      display: block;
+      color: rgba(255,255,255,0.85);
+      padding: 4px 0;
+      font-size: 1.1rem;
+    }
 
+    .sidebar nav a:hover {
+      color: #ffffff;
+      text-decoration: none;
+      padding-left: 6px;
+      transition: padding-left 0.2s;
+    }
 
-<!-- right column -->
-<TD BGCOLOR="#FFFFFF" WIDTH="75%">
-<A NAME="Home"></A>
-<TABLE>
-<TR>
-<TD WIDTH="75%">
-<H1>Christian Urban</H1>
+    .sidebar .logo-section {
+      margin-top: auto;
+      padding-top: 24px;
+    }
 
-<B>E-mail</B> 
-christian.urban <I>at</I> kcl ac uk<BR>
-<BR>
+    .sidebar .logo-section a {
+      display: block;
+      margin-bottom: 12px;
+    }
 
-<B>Address</B> 
-<A HREF="https://www.kcl.ac.uk/nms/depts/informatics/">Department of Informatics</A>,
-<A HREF="https://www.kcl.ac.uk">King's College London</A>,
-Bush House, 30 Aldwych, London WC2B 4BG, UK. My office is 7.07 on the 7th floor, North Wing, of the Bush House. 
-<BR>
+    .sidebar .logo-section img {
+      height: 48px;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
 
-</TD>
-<TD align="right" valign="top"> 
-<A HREF="https://urbanchr.github.io/picture-small.jpg"><IMG ALT="" SRC="picture-small.jpg" align="top"></A>
-</TD>
-</TR>
-</TABLE>
-<p>
-  <A HREF="https://urbanchr.github.io/Cookbook" target="_top">Isabelle Programming Tutorial</A>
-  (draft of a 200-page tutorial on Isabelle programming - updated to
-    <A HREF="https://isabelle.in.tum.de">Isabelle 2019</A> thanks to Norbert Schirmer)<BR><BR>
-</TD>
-</TR>
+    .sidebar .logo-section a:hover img {
+      opacity: 1;
+    }
 
-<TR>
-<TD BGCOLOR="#FFFFFF" WIDTH="75%">
-<B>Current Position</B> 
-Since 2011 I have been a lecturer in the Department of Informatics at King's College London.
-This is similar to a position of an assistant professor in other places. In 2011,
-I was also offered a lectureship 
-<A HREF="https://www.it.uu.se/" TITLE="Uppsala">here</A>, an associate professorship 
-<A HREF="https://en.itu.dk/" TITLE="ITU, Copenhagen">here</A>,
-and full professorships 
-<A HREF="https://en.wikipedia.org/wiki/University_of_Science_and_Technology_of_China" TITLE="IAS, Suzhou">here</A> and 
-<A HREF="https://en.wikipedia.org/wiki/East_China_Normal_University" TITLE="Shanghai">here</A>. 
-I thank all people involved for their efforts.
-<P>
+    /* ── Main content ── */
+    .main-content {
+      margin-left: var(--sidebar-width);
+      flex: 1;
+      padding: 0;
+    }
 
-<B>Past Positions</B> 
-In April 2006, I was awarded an <A HREF="https://en.wikipedia.org/wiki/Emmy_Noether">Emmy-Noether</A> 
-<A HREF="https://www.dfg.de/en/research_funding/programmes/individual/emmy_noether/">fellowship</A>, which I held at the <A HREF="https://www.in.tum.de/en.html">TU Munich</A> until
-September 2011.
-Between September 2008 and February 2009, I was an invited research scientist in 
-the <A HREF="https://www.cs.princeton.edu/">Department of Computer Science</A> in Princeton.
-In 2004/05 I was an Alexander-von-Humboldt fellow in Munich and 
-from 2000 until 2004 I was awarded a Research Fellowship in Cambridge. Before that
-I did my PhD in Cambridge funded by two scholarships from the German Academic Exchange 
-Service (<A HREF="https://www.daad.de/index.html">DAAD</A>).
-<P>
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(135deg, var(--primary) 0%, #34495e 100%);
+      color: #ffffff;
+      padding: 60px 64px;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
 
-<B>Skolem Award 2015</B> Together with
-<A HREF="https://www.lip6.fr/Christine.Tasson/">Christine Tasson</A>, I was awarded a
-<A HREF="https://cadeinc.org/Skolem-Award">Thoralf Skolem Award</A>, a ten-year
-  test-of-time award from CADE. This was for our
-  <A HREF="https://urbanchr.github.io/Publications/nom-cade-05.ps">paper</A>
-  on Nominal Techniques in Isabelle/HOL from 2005. The Skolem Award award was given also
-  to Nicolaas de Bruijn, Zohar Manna, Moshe Vardi and
-  Nachum Derschowitz, amongst others.
-<P>
-  
-<B>Research Interests</B> theorem provers, verification, programming languages, compilers, 
-algorithms, security, proof theory, type systems, concurrency, lambda calculus, unification, 
-regular expressions, computability, complexity, functional and logic  programming.
-<P>
+    .hero-text {
+      flex: 1;
+    }
 
-<B>Teaching</B> I usually enjoy teaching. At King's my students nominated me for the Teaching
-Excellence Award in
-2012, 2015, 2016 and 2017, and for the best MSc Project supervisor in 2015.
-In 2014 I received both prizes for Best UG Project Supervisor and for Best
-MSc Project Supervisor in the <A HREF="https://www.kcl.ac.uk/nmes/index">NMS Faculty</A>.
-In 2020/21, I was again nominated for the King's Education Award with a very kind
-<A HREF="https://urbanchr.github.io/nomination2021.pdf">citation</A> from a student.
-<A HREF="https://urbanchr.github.io/nomination2022.pdf">Here</A> is the citation from
-2021/22. Another <A HREF="https://urbanchr.github.io/nomination2023.pdf">one</A> for 2022/23.
-And the <A HREF="https://urbanchr.github.io/nomination2024.pdf">one</A> for 2023/24.
-In 2025/26, I was the joint winner (together with Andrew Coles) of the <A HREF="https://urbanchr.github.io/teachingaward2026.pdf">Faculty Teaching Award</A> for <i>Excellent Assessment and Feedback</i>.
-<P>
+    .hero-text h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
 
-  
+    .hero-text .info-block {
+      margin-bottom: 12px;
+      font-size: 1.2rem;
+      color: rgba(255,255,255,0.85);
+    }
 
-<B>Conferences</B>
-UNIF'06 (member of PC), 
-<A HREF="https://www.cs.mcgill.ca/~bpientka/lfmtp07">LFMTP'07</A> (member of PC), 
-LFMTP'08 (PC co-chair), 
-<A HREF="https://www.cis.upenn.edu/~sweirich/wmm/">WMM'08</A> (member of PC),
-LSFA'08 (invited speaker),
-<A HREF="https://www.inf.kcl.ac.uk/staff/maribel/TAASN.html">TAASN'09</A> (member of PC),
-<A HREF="https://lsfa09.cic.unb.br/">LSFA'09</A> (member of PC),
-<A HREF="https://urbanchr.github.io/Nominal/activities/tphols09/idw.html">IDW'09</A> (organiser),
-<A HREF="https://www.seas.upenn.edu/~sweirich/wmm/wmm09.html">WMM'09</A> (PC chair),
-<A HREF="https://urbanchr.github.io/Nominal/activities/tphols09/">TPHOLs'09</A> (PC co-chair),
-Automatheo'10 (member of PC),
-<A HREF="https://www.floc-conference.org/">ITP'10</A> (member of PC),
-UNIF'10 (invited speaker),
-<A HREF="https://www.cis.upenn.edu/~bcpierce/wmm/">WMM'10</A> (invited speaker),
-<A HREF="https://urbanchr.github.io/Nominal/activities/idw10/idw.html">IDW'10</A> (co-organiser),
-CPP'11 (member of PC),
-<A HREF="https://www.rdp2011.uns.ac.rs/rta/">RTA'11</A> (member of PC),
-<A HREF="https://lfmtp11.cs.umn.edu">LFMTP'11</A> (member of PC),
-<A HREF="https://www.cs.uwyo.edu/~ruben/itp-2014">ITP'14</A> (member of PC),
-<A HREF="https://www.cicm-conference.org/2015/cicm.php?event=mkm">MKM'15</A> (member of PC),
-<A HREF="https://urbanchr.github.io/itp-2015/">ITP'15</A> (PC co-chair),
-<A HREF="https://itp2016.inria.fr">ITP'16</A> (member of PC)
-<A HREF="https://lsfa.cic.unb.br">LSFA'17</A> (member of PC)
-<A HREF="https://itp2017.cic.unb.br">ITP'17</A> (member of PC)
-<A HREF="https://itp19.cecs.pdx.edu">ITP'19</A> (member of PC)
-<A HREF="https://ijcar2020.org">IJCAR'20</A> (member of PC)
-<A HREF="https://easyconferences.eu/itp2021bid/">ITP'21</A> (member of PC)
-<A HREF="https://www.cs.cmu.edu/~mheule/CADE28/">CADE'21</A> (member of PC)
-<A HREF="https://www.viam.science.tsu.ge/itp2024/">ITP'24</A> (member of PC)
-<P>
+    .hero-text .info-block strong {
+      color: #ffffff;
+    }
 
-<A HREF="https://urbanchr.github.io/itp-2015/">ITP'15</A> took place in Nanjing organised
-by Xingyuan Zhang and me<BR>
-<p>
+    .hero-text .info-block a {
+      color: #85c0f9;
+    }
 
-<B>Current PhD</B> Meshal Nasser Binnasban<BR>  
-  <B>Former PhDs</B>
-  Fahad Ausaf (worked at ARM in the ASL compiler team, works now
-  at Huawei verifying CPUs and modelling ISAs);
-  Chengsong Tan (postdoc at Imperial College,
-  now works at <A HREF="https://www.kaihongdigi.com">Kaihong Digital</A> verifying OSes)<BR>
-<B>Former RAs</B> Chunhan Wu, <A HREF="https://cl-informatik.uibk.ac.at/users/cek/">Cezary Kaliszyk</A>, 
-<A HREF="https://dpt-info.u-strasbg.fr/~narboux/">Julien Narboux</A><p>
+    .hero-text .info-block a:hover {
+      color: #ffffff;
+    }
 
-  If I am not teaching or not doing any research, I am sometimes in the lavender
-  <A HREF="https://urbanchr.github.io/family.jpg">fields</A> of London, or I do
-  <A HREF="https://urbanchr.github.io/c.jpg">model-shoots</A> far away, or I am
-  assistant to the 
-  <A HREF="https://urbanchr.github.io/s1.jpg">resident</A>
-  <A HREF="https://urbanchr.github.io/s2.jpg">chief</A>
-  <A HREF="https://urbanchr.github.io/s3.jpg">paleontologist</A>.
-</TD>
-</TR>
+    .hero-photo {
+      flex-shrink: 0;
+    }
 
-<TR>
-<TD BGCOLOR="#FFFFFF" WIDTH="75%">
-<B>Nominal Isabelle</B> 
-I am the main developer of Nominal 
-<A HREF="https://isabelle.in.tum.de">Isabelle</A>. This is joint work with 
-<A HREF="https://www21.in.tum.de/~berghofe/">Dr Stefan Berghofer</A>,
-<A HREF="https://sketis.net/">Dr Markus Wenzel</A>,
-<A HREF="https://cl-informatik.uibk.ac.at/users/cek/">Dr Cezary Kaliszyk</A>,
-<A HREF="https://user.it.uu.se/~tjawe125/">Dr Tjark Weber</A> and 
-the Isabelle-team in Munich.
-Many of the theoretical ideas originate from the nominal logic project - a wonderful project headed 
-by <A HREF="https://www.cl.cam.ac.uk/~amp12/">Prof. Andrew Pitts</A>.  
-The aim with this work is to make formal reasoning involving binders as simple as 
-on paper and the hope is to lure  
-<A HREF="https://en.wikipedia.org/wiki/POPLmark_challenge">masses</A> to automated
-theorem proving. My funding for this work was provided in 2004 and 2005 by a research 
-fellowship from the 
-<A HREF="https://en.wikipedia.org/wiki/Alexander_von_Humboldt">Alexander-von-Humboldt</A>
-<A HREF="https://www.humboldt-foundation.de">foundation</A>. During this time I was a visitor in the group of 
-<A HREF="https://www.mathematik.uni-muenchen.de/~schwicht/">Prof. Helmut Schwichtenberg</A> in Munich.
-Between 2006 and 2011 this work is supported by an
-<A HREF="https://en.wikipedia.org/wiki/Emmy_Noether">Emmy-Noether</A> 
-<A HREF="https://www.dfg.de/en/research_funding/programmes/individual/emmy_noether/">fellowship</A> at the TUM.
-There is a <A HREF="https://urbanchr.github.io/Nominal/">webpage</A> about Nominal
-Isabelle, which also includes a list of projects that use Nominal Isabelle.
-Users of Nominal Isabelle had their papers appearing at LICS, POPL, FOSSACS, SOS, TPHOLs, CPP, SEFM,
-the Haskell Symposium and
-in the Journal of Automated Reasoning. Nowadays, Nominal Isabelle 2 is part of the <A HREF="https://www.isa-afp.org">Archive of Formal Proofs</A>.
-</TD>
-</TR>
+    .hero-photo img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid rgba(255,255,255,0.3);
+    }
 
-<TR>
-<TD BGCOLOR="#FFFFFF" WIDTH="75%">
-<B>Real-Time Scheduling and Priority Inheritance</B>
-  In real-time operating systems with processes, resource locking and
-  priority scheduling, one faces the problem of
-  <A HREF="https://en.wikipedia.org/wiki/Priority_inversion">priority inversion</A> (processes
-  with lower priority block processes with higher priority indefinitely). If you do not prevent this problem,
-  then processes can behave erratically, as <A HREF="https://www.nasa.gov">NASA</A> found out the
-  <A HREF="https://catless.ncl.ac.uk/Risks/19.54.html#subj6">hard</A> way with their first
-  <A HREF="https://www.jpl.nasa.gov/missions/mars-pathfinder-sojourner-rover/">Mars Pathfinder mission</A>.
-  The priority inheritance protocol is a widely used scheduling algorithm that prevents
-  priority inversion. However, the <A HREF="https://dx.doi.org/10.1109/12.57058">original paper</A>
-  describing this algorithm contains an incorrect algorithm and a bogus(!) correctness proof.
+    .hero-highlight {
+      margin-top: 20px;
+      padding: 16px 20px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 8px;
+      font-size: 1.10rem;
+      color: rgba(255,255,255,0.9);
+    }
 
-  We formalised our version of the priority inheritance protocol, including a generalisation
-  of the original work (we allow overlapping critical sections) in the theorem prover
-  <A HREF="https://isabelle.in.tum.de">Isabelle</A>.
+    .hero-highlight a {
+      color: #85c0f9;
+      font-weight: 600;
+    }
 
-  In our formalisation we use the inductive method we learned from
-  <A HREF="https://www.cl.cam.ac.uk/~lp15/">Prof. Larry Paulson</A>.
-  He used this method in order to prove the correctness of cryptographic
-  protocols. We have implemented our algorithm on top of the
-  the small <A HREF="https://en.wikipedia.org/wiki/Pintos">PINTOS</A>
-  operating system used for teaching (we passed all their test cases and were
-  faster than their reference implementation).
+    /* ── Sections ── */
+    .content {
+      max-width: 1100px;
+      padding: 40px 64px 80px;
+    }
 
-  
-  While the problem with the original algorithm was already known for some time, the incorrect
-  specification seems to be still widely in use and described in many textbooks on real-time operating systems,
-  including famous and rather expensive
-  ones. Feel free to decide whether they are worth your time and money. Task: Spot the problems in  
-  <A href="https://www.amazon.com/Real-Time-Systems-Design-Analysis-Practitioner-ebook/dp/B0062LNOCW">here</A>,
-  <A href="https://www.amazon.co.uk/Real-Time-Concepts-Embedded-Systems-Qing/dp/1578201241">here</A>,
-  <A href="https://www.amazon.co.uk/Real-Time-Systems-Jane-W-Liu/dp/0130996513">here</A>,
-  <A href="https://www.springer.com/gp/book/9780792392118">here</A> and
-  <A href="https://www.os-book.com/OS9/">here</A>!
-  Alternatively, you can look at the quotes and pointers in our
-  <A HREF="https://urbanchr.github.io/Publications/pip.pdf">paper</A>. A notable
-  exception is the <A HREF="https://www.springer.com/gp/book/9781461406754">textbook</A>
-  by Buttazzo, who gives the correct specification. Unfortunately, his work did not
-  help us with proving the correctness of the priority inheritance protocol.
-  
-  This is joint work with Prof. Xingyuan Zhang and his student Chunhan Wu from the 
-  PLA University of Science and Technology in Nanjing. 
-</TD>
-</TR>
+    .section {
+      margin-bottom: 24px;
+    }
 
-<TR>
-<TD BGCOLOR="#FFFFFF" WIDTH="75%">
-<B>Myhill-Nerode and Regular Expressions</B> 
-Out of frustration of having to teach reasoning in theorem provers with worn-out examples like
-fib and even/odd, we implemented a large part of regular language theory in Isabelle/HOL.
-This <A HREF="https://www.isa-afp.org/entries/Myhill-Nerode.html">implementation</A> 
-gives rise to much more interesting examples, as shown 
-<A HREF="https://www.cs.cmu.edu/~rwh/papers/regexp/jfp.pdf">here</A> and 
-<A HREF="https://ropas.snu.ac.kr/~kwang/paper/06-jfp-yi.pdf">here</A>. It turns out that
-formalisations of automata theory are a huge 
-<A HREF="https://lists.cam.ac.uk/sympa/arc/cl-isabelle-users/2005-09/msg00013.html">pain</A> 
-in theorem provers, especially in those that are based on HOL. 
-We therefore went against the 
-<A HREF="https://www.cs.cornell.edu/~kozen/papers/papers_by_year.htm#K97a">mainstream</A> 
-and used in our formalisation regular expressions exclusively,
-because they are much more convenient for formal reasoning. The results we
-formalised include: the Myhill-Nerode theorem, the closure of regular languages
-under complementation, finiteness of derivatives of regular expressions and a surprising 
-result about Subseq, which according to 
-this 
-<A HREF="https://blog.computationalcomplexity.org/2006/01/theorem-that-should-be-better-known.html">blog</A> 
-should be better known. We also answered a
-<A HREF="https://blog.computationalcomplexity.org/2013/02/proving-dfa-langs-closed-under-concat.html">question</A> from the same blog about
-"proving Reg-exp-langs [being] closed under complementation without using equiv to DFA's"....yes we can!
-This is joint work with Prof. Xingyuan
-Zhang and his student Chunhan Wu from the 
-PLA University of Science and Technology in Nanjing. 
-My funding for this work came from the 
-<A HREF="https://www.dfg.de/en/about-us/international-cooperation/dfg-abroad/beijing">Chinese-German Research Centre</A>. 
-</TD>
-</TR>
+    .section h2 {
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+    }
 
-<TR>
-<TD BGCOLOR="#FFFFFF" WIDTH="75%">
-<B>Nominal Unification and Alpha-Prolog</B> 
-<A HREF="https://urbanchr.github.io/Unification">Nominal unification</A> is one outcome of 
-my involvement in the nominal logic project in Cambridge. Another is the logic programming language 
-alpha-Prolog (joint work with <A HREF="https://homepages.inf.ed.ac.uk/jcheney/">Dr James Cheney</A>), 
-which uses nominal unification - click for details 
-<A HREF="https://homepages.inf.ed.ac.uk/jcheney/programs/aprolog/">here</A>.
-The nominal unification algorithm has been 
-<A HREF="https://urbanchr.github.io/Unification">formally verified</A> in Isabelle. This 
-was possible  since this unification algorithm is formulated in a simple first-order language 
-(unlike other algorithms for higher-order unification). 
-<A HREF="https://nms.kcl.ac.uk/maribel.fernandez/">Prof. Maribel Fernandez</A> and her student
-improved the nominal unification algorithm to be quadratic. 
-  <A HREF="https://en.wikipedia.org/wiki/Daniel_P._Friedman">Prof. Daniel Friedman</A> and his group use nominal 
-unification in their alpha-Kanren system implemented in Scheme. This work has also found its
-  way into <A HREF="https://clojure.org">Clojure</A> as the <A HREF="https://github.com/clojure/core.logic/wiki/core.logic.nominal">core.logic.nominal</A> package.
-My funding for this work was provided through a research fellowship from 
-<A HREF="https://www.corpus.cam.ac.uk">Corpus Christi College</A>, Cambridge. 
-</TD>
-</TR>
+    .section p {
+      margin-bottom: 14px;
+      font-size: 1.10rem;
+      color: var(--text);
+    }
 
-<TR>
-<TD BGCOLOR="#FFFFFF"  WIDTH="75%">
-<B>Classical Logic</B>
-I was Ph.D. student in the University of Cambridge 
-<A HREF="https://www.cl.cam.ac.uk">Computer Laboratory</A>
-and for three years 
-called Gonville and Caius College my home. I was very lucky to have   
-<A HREF="https://labs.oracle.com/pls/apex/f?p=labs:bio:0:2044">Dr Gavin Bierman</A>
-as supervisor. My research in Cambridge was also very  much influenced by 
-<A HREF="https://en.wikipedia.org/wiki/Martin_Hyland">Prof. Martin Hyland</A>.
-Some details on my thesis "Classical Logic and Computation" are 
-<A HREF="https://urbanchr.github.io/PhD/index.html">elsewhere</A>, including
-a <A HREF="https://urbanchr.github.io/Cut/cutapplet.html">Java Applet</A> that 
-'visualises' some of the results from the thesis. I completed the writing of
-the thesis in  <A HREF="https://iml.univ-mrs.fr/ldp/">Marseille</A> in the group of 
-<A HREF="https://girard.perso.math.cnrs.fr/Accueil.html">Prof. Jean-Yves Girard</A>. My study in 
-Cambridge was funded by two <A HREF="https://www.daad.de/index.html">scholarships</a> 
-from the German government; my year in Marseille by a TMR-fellowship from the EU. 
-My PhD was also one starting point for the EPSRC Project on the Semantics of Classical 
-Proofs. The strong normalisation result in the PhD has been used in 2007 by 
-<A HREF="https://jao2015.sciencesconf.org/conference/jao2015/pages/Claude_Kirchner.pdf">Prof. Claude Kirchner</A> and his 
-students for proving consistency of their superdeduction system lemuridae.
-</TD>
-</TR>
+    .section p a {
+      font-weight: 500;
+    }
 
+    /* ── Card-style blocks ── */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 28px 32px;
+      margin-bottom: 24px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
 
+    .card h2 {
+      font-size: 1.3rem;
+      color: var(--primary);
+      margin-bottom: 14px;
+    }
 
-<TR>
-<TD BGCOLOR="#FFFFFF" WIDTH="75%">
-<B>Forum</B> 
-I implemented Forum, a programming language based on classical linear logic, 
-as my M.Phil. thesis. This was joint work with 
-<A HREF="https://st-andrews.academia.edu/RoyDyckhoff">Dr Roy Dyckhoff</A>. 
-Details can be found  
-<A HREF="https://rd.host.cs.st-andrews.ac.uk/logic/nonmac/">here</A> and
-<A HREF="https://www.lix.polytechnique.fr/Labo/Dale.Miller/forum/">here</A>. During my
-M.Phil study I spent one month in Philadelphia invited by 
-<A HREF="https://www.lix.polytechnique.fr/~dale/">Prof. Dale Miller</A>.
-</TD>
-</TR>
+    .card p {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      line-height: 1.75;
+    }
 
-<TR>
-<TD BGCOLOR="#FFFFFF" WIDTH="75%">
-<B>G4ip</B> An implementation of G4ip using the imperative language Pizza can be found 
-<A HREF="https://urbanchr.github.io/Prover/index.html">here</A>.
-<A HREF="https://pizzacompiler.sourceforge.net">Pizza</A>, written around 1996, is a conservative 
-extension of Java and a precursor of Scala. My implementation illustrates the technique of 
-success continuations in proof search. <B>Update:</B> This ancient work inspired
-<A HREF="https://rosien.net/">Adam Rosien</A> to re-surrect some parts of it in
-<A HREF="https://github.com/arosien/sequentish/blob/master/src/main/scala/net/rosien/sequentish/LJT.scala">Scala</A> [<A HREF="https://github.com/arosien/sequentish">github</A>,
-    <A HREF="https://arosien.github.io/sequentish/slides.html#/">slides</A>]
-</TD>
-</TR>
- 
+    /* ── Conferences list ── */
+    .conf-list {
+      columns: 2;
+      column-gap: 40px;
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
 
-</TABLE>
-<P>
-<a href="https://validator.w3.org/check/referer">[Validate this page.]</a>
-</font>
-</BODY>
-</HTML>
+    .conf-list a {
+      display: inline;
+      font-weight: 500;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      text-align: center;
+      padding: 24px 0;
+      font-size: 0.8rem;
+      color: var(--text-light);
+      border-top: 1px solid var(--border);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .sidebar {
+        width: 220px;
+        padding: 24px 16px;
+      }
+      .main-content {
+        margin-left: 220px;
+      }
+      .hero {
+        padding: 36px 32px;
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+      .hero-photo img {
+        width: 140px;
+        height: 140px;
+      }
+      .content {
+        padding: 32px 32px 60px;
+      }
+      .conf-list {
+        columns: 1;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .sidebar {
+        position: static;
+        width: 100%;
+        padding: 20px 24px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+      .sidebar h2 {
+        margin: 0;
+      }
+      .sidebar .logo-section {
+        margin-top: 0;
+        padding-top: 0;
+      }
+      .main-content {
+        margin-left: 0;
+      }
+      .hero {
+        padding: 28px 20px;
+      }
+      .hero-text h1 {
+        font-size: 1.8rem;
+      }
+      .content {
+        padding: 24px 20px 48px;
+      }
+      .card {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Links</h2>
+      <nav>
+        <a href="https://urbanchr.github.io/index.html">Home</a>
+        <a href="https://urbanchr.github.io/publications.html">Publications</a>
+        <a href="https://urbanchr.github.io/teaching.html">Teaching</a>
+        <a href="https://urbanchr.github.io/travelling.html">Recent Talks</a>
+        <a href="https://urbanchr.github.io/Nominal/">Nominal Isabelle</a>
+      </nav>
+
+      <h2>Handy Information</h2>
+      <nav>
+        <a href="https://urbanchr.github.io/logic.html">People in Logic</a>
+        <a href="https://urbanchr.github.io/programming.html">Programming Languages</a>
+        <a href="https://urbanchr.github.io/misc.html">Miscellaneous</a>
+      </nav>
+
+      <div class="logo-section">
+        <a href="https://urbanchr.github.io/Nominal/">
+          <img src="nominal-logo.gif" alt="Nominal Isabelle">
+        </a>
+        <a href="https://urbanchr.github.io/Cookbook/">
+          <img src="Cookbook/logo-documentation.gif" alt="Cookbook">
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <div class="main-content">
+
+      <!-- Hero -->
+      <header class="hero">
+        <div class="hero-text">
+          <h1>Christian Urban</h1>
+
+          <div class="info-block">
+            <strong>E-mail</strong><br>
+            christian.urban <i>at</i> kcl ac uk
+          </div>
+
+          <div class="info-block">
+            <strong>Address</strong><br>
+            <a href="https://www.kcl.ac.uk/nms/depts/informatics/">Department of Informatics</a>,
+            <a href="https://www.kcl.ac.uk">King's College London</a>,
+            Bush House, 30 Aldwych, London WC2B 4BG, UK. My office is 7.07 on the 7th floor, North Wing, of the Bush House.
+          </div>
+
+          <div class="hero-highlight">
+            <a href="https://urbanchr.github.io/Cookbook" target="_top">Isabelle Programming Tutorial</a>
+            &mdash; draft of a 200-page tutorial on Isabelle programming &mdash; updated to
+            <a href="https://isabelle.in.tum.de">Isabelle 2019</a> thanks to Norbert Schirmer
+          </div>
+        </div>
+        <div class="hero-photo">
+          <a href="https://urbanchr.github.io/picture-small.jpg">
+            <img src="picture-small.jpg" alt="Christian Urban">
+          </a>
+        </div>
+      </header>
+
+      <!-- Content -->
+      <div class="content">
+
+        <div class="section">
+          <h2>Current Position</h2>
+          <p>Since 2011 I have been a lecturer in the Department of Informatics at King's College London. This is similar to a position of an assistant professor in other places. In 2011, I was also offered a lectureship <a href="https://www.it.uu.se/" title="Uppsala">here</a>, an associate professorship <a href="https://en.itu.dk/" title="ITU, Copenhagen">here</a>, and full professorships <a href="https://en.wikipedia.org/wiki/University_of_Science_and_Technology_of_China" title="IAS, Suzhou">here</a> and <a href="https://en.wikipedia.org/wiki/East_China_Normal_University" title="Shanghai">here</a>. I thank all people involved for their efforts.</p>
+        </div>
+
+        <div class="section">
+          <h2>Past Positions</h2>
+          <p>In April 2006, I was awarded an <a href="https://en.wikipedia.org/wiki/Emmy_Noether">Emmy-Noether</a> <a href="https://www.dfg.de/en/research_funding/programmes/individual/emmy_noether/">fellowship</a>, which I held at the <a href="https://www.in.tum.de/en.html">TU Munich</a> until September 2011. Between September 2008 and February 2009, I was an invited research scientist in the <a href="https://www.cs.princeton.edu/">Department of Computer Science</a> in Princeton. In 2004/05 I was an Alexander-von-Humboldt fellow in Munich and from 2000 until 2004 I was awarded a Research Fellowship in Cambridge. Before that I did my PhD in Cambridge funded by two scholarships from the German Academic Exchange Service (<a href="https://www.daad.de/index.html">DAAD</a>).</p>
+        </div>
+
+        <div class="section">
+          <h2>Skolem Award 2015</h2>
+          <p>Together with <a href="https://www.lip6.fr/Christine.Tasson/">Christine Tasson</a>, I was awarded a <a href="https://cadeinc.org/Skolem-Award">Thoralf Skolem Award</a>, a ten-year test-of-time award from CADE. This was for our <a href="https://urbanchr.github.io/Publications/nom-cade-05.ps">paper</a> on Nominal Techniques in Isabelle/HOL from 2005. The Skolem Award award was given also to Nicolaas de Bruijn, Zohar Manna, Moshe Vardi and Nachum Derschowitz, amongst others.</p>
+        </div>
+
+        <div class="section">
+          <h2>Research Interests</h2>
+          <p>theorem provers, verification, programming languages, compilers, algorithms, security, proof theory, type systems, concurrency, lambda calculus, unification, regular expressions, computability, complexity, functional and logic programming.</p>
+        </div>
+
+        <div class="section">
+          <h2>Teaching</h2>
+          <p>I usually enjoy teaching. At King's my students nominated me for the Teaching Excellence Award in 2012, 2015, 2016 and 2017, and for the best MSc Project supervisor in 2015. In 2014 I received both prizes for Best UG Project Supervisor and for Best MSc Project Supervisor in the <a href="https://www.kcl.ac.uk/nmes/index">NMS Faculty</a>. In 2020/21, I was again nominated for the King's Education Award with a very kind <a href="https://urbanchr.github.io/nomination2021.pdf">citation</a> from a student. <a href="https://urbanchr.github.io/nomination2022.pdf">Here</a> is the citation from 2021/22 for the same award. Another <a href="https://urbanchr.github.io/nomination2023.pdf">one</a> for 2022/23. And the <a href="https://urbanchr.github.io/nomination2024.pdf">one</a> for 2023/24. In 2025/26, I was the joint winner (together with Andrew Coles) of the <a href="https://urbanchr.github.io/teachingaward2026.pdf">Faculty Teaching Award</a> for <i>Excellent Assessment and Feedback</i>.</p>
+        </div>
+
+        <div class="section">
+          <h2>Conferences</h2>
+          <div class="conf-list">
+            UNIF'06 (member of PC),
+            <a href="https://www.cs.mcgill.ca/~bpientka/lfmtp07">LFMTP'07</a> (member of PC),
+            LFMTP'08 (PC co-chair),
+            <a href="https://www.cis.upenn.edu/~sweirich/wmm/">WMM'08</a> (member of PC),
+            LSFA'08 (invited speaker),
+            <a href="https://www.inf.kcl.ac.uk/staff/maribel/TAASN.html">TAASN'09</a> (member of PC),
+            <a href="https://lsfa09.cic.unb.br/">LSFA'09</a> (member of PC),
+            <a href="https://urbanchr.github.io/Nominal/activities/tphols09/idw.html">IDW'09</a> (organiser),
+            <a href="https://www.seas.upenn.edu/~sweirich/wmm/wmm09.html">WMM'09</a> (PC chair),
+            <a href="https://urbanchr.github.io/Nominal/activities/tphols09/">TPHOLs'09</a> (PC co-chair),
+            Automatheo'10 (member of PC),
+            <a href="https://www.floc-conference.org/">ITP'10</a> (member of PC),
+            UNIF'10 (invited speaker),
+            <a href="https://www.cis.upenn.edu/~bcpierce/wmm/">WMM'10</a> (invited speaker),
+            <a href="https://urbanchr.github.io/Nominal/activities/idw10/idw.html">IDW'10</a> (co-organiser),
+            CPP'11 (member of PC),
+            <a href="https://www.rdp2011.uns.ac.rs/rta/">RTA'11</a> (member of PC),
+            <a href="https://lfmtp11.cs.umn.edu">LFMTP'11</a> (member of PC),
+            <a href="https://www.cs.uwyo.edu/~ruben/itp-2014">ITP'14</a> (member of PC),
+            <a href="https://www.cicm-conference.org/2015/cicm.php?event=mkm">MKM'15</a> (member of PC),
+            <a href="https://urbanchr.github.io/itp-2015/">ITP'15</a> (PC co-chair),
+            <a href="https://itp2016.inria.fr">ITP'16</a> (member of PC)
+            <a href="https://lsfa.cic.unb.br">LSFA'17</a> (member of PC)
+            <a href="https://itp2017.cic.unb.br">ITP'17</a> (member of PC)
+            <a href="https://itp19.cecs.pdx.edu">ITP'19</a> (member of PC)
+            <a href="https://ijcar2020.org">IJCAR'20</a> (member of PC)
+            <a href="https://easyconferences.eu/itp2021bid/">ITP'21</a> (member of PC)
+            <a href="https://www.cs.cmu.edu/~mheule/CADE28/">CADE'21</a> (member of PC)
+            <a href="https://www.viam.science.tsu.ge/itp2024/">ITP'24</a> (member of PC)
+          </div>
+          <p style="margin-top: 16px;"><a href="https://urbanchr.github.io/itp-2015/">ITP'15</a> took place in Nanjing organised by Xingyuan Zhang and me.</p>
+        </div>
+
+        <div class="section">
+          <h2>PhD Students</h2>
+          <p><strong>Current:</strong> Meshal Nasser Binnasban<br>
+            <strong>Former:</strong> Fahad Ausaf (worked at ARM in the ASL compiler team, works now at Huawei verifying CPUs and modelling ISAs); Chengsong Tan (postdoc at Imperial College, now works at <a href="https://www.kaihong.com">Kaihong Digital</a> verifying OSes)<br>
+          <strong>Former RAs:</strong> Chunhan Wu, <a href="https://ckaliszyk.github.io/">Cezary Kaliszyk</a>, <a href="https://dpt-info.u-strasbg.fr/~narboux/">Julien Narboux</a></p>
+        </div>
+
+        <div class="section">
+          <p>If I am not teaching or not doing any research, I am sometimes in the lavender <a href="https://urbanchr.github.io/family.jpg">fields</a> of London, or I do <a href="https://urbanchr.github.io/c.jpg">model-shoots</a> far away, or I am assistant to the <a href="https://urbanchr.github.io/s1.jpg">resident</a> <a href="https://urbanchr.github.io/s2.jpg">chief</a> <a href="https://urbanchr.github.io/s3.jpg">paleontologist</a>.</p>
+        </div>
+
+        <div class="card">
+          <h2>Nominal Isabelle</h2>
+          <p>I am the main developer of Nominal <a href="https://isabelle.in.tum.de">Isabelle</a>. This is joint work with <a href="https://www21.in.tum.de/~berghofe/">Dr Stefan Berghofer</a>, <a href="https://sketis.net/">Dr Markus Wenzel</a>, <a href="https://ckaliszyk.github.io/">Dr Cezary Kaliszyk</a>, <a href="https://user.it.uu.se/~tjawe125/">Dr Tjark Weber</a> and the Isabelle-team in Munich. Many of the theoretical ideas originate from the nominal logic project &mdash; a wonderful project headed by <a href="https://www.cl.cam.ac.uk/~amp12/">Prof. Andrew Pitts</a>. The aim with this work is to make formal reasoning involving binders as simple as on paper and the hope is to lure <a href="https://en.wikipedia.org/wiki/POPLmark_challenge">masses</a> to automated theorem proving. My funding for this work was provided in 2004 and 2005 by a research fellowship from the <a href="https://en.wikipedia.org/wiki/Alexander_von_Humboldt">Alexander-von-Humboldt</a> <a href="https://www.humboldt-foundation.de">foundation</a>. During this time I was a visitor in the group of <a href="https://www.mathematik.uni-muenchen.de/~schwicht/">Prof. Helmut Schwichtenberg</a> in Munich. Between 2006 and 2011 this work is supported by an <a href="https://en.wikipedia.org/wiki/Emmy_Noether">Emmy-Noether</a> <a href="https://www.dfg.de/en/research_funding/programmes/individual/emmy_noether/">fellowship</a> at the TUM. There is a <a href="https://urbanchr.github.io/Nominal/">webpage</a> about Nominal Isabelle, which also includes a list of projects that use Nominal Isabelle. Users of Nominal Isabelle had their papers appearing at LICS, POPL, FOSSACS, SOS, TPHOLs, CPP, SEFM, the Haskell Symposium and in the Journal of Automated Reasoning. Nowadays, Nominal Isabelle 2 is part of the <a href="https://www.isa-afp.org">Archive of Formal Proofs</a>.</p>
+        </div>
+
+        <div class="card">
+          <h2>Real-Time Scheduling and Priority Inheritance</h2>
+          <p>In real-time operating systems with processes, resource locking and priority scheduling, one faces the problem of <a href="https://en.wikipedia.org/wiki/Priority_inversion">priority inversion</a> (processes with lower priority block processes with higher priority indefinitely). If you do not prevent this problem, then processes can behave erratically, as <a href="https://www.nasa.gov">NASA</a> found out the <a href="https://catless.ncl.ac.uk/Risks/19.54.html#subj6">hard</a> way with their first <a href="https://www.jpl.nasa.gov/missions/mars-pathfinder-sojourner-rover/">Mars Pathfinder mission</a>. The priority inheritance protocol is a widely used scheduling algorithm that prevents priority inversion. However, the <a href="https://dx.doi.org/10.1109/12.57058">original paper</a> describing this algorithm contains an incorrect algorithm and a bogus(!) correctness proof. We formalised our version of the priority inheritance protocol, including a generalisation of the original work (we allow overlapping critical sections) in the theorem prover <a href="https://isabelle.in.tum.de">Isabelle</a>. In our formalisation we use the inductive method we learned from <a href="https://www.cl.cam.ac.uk/~lp15/">Prof. Larry Paulson</a>. He used this method in order to prove the correctness of cryptographic protocols. We have implemented our algorithm on top of the small <a href="https://en.wikipedia.org/wiki/Pintos">PINTOS</a> operating system used for teaching (we passed all their test cases and were faster than their reference implementation). While the problem with the original algorithm was already known for some time, the incorrect specification seems to be still widely in use and described in many textbooks on real-time operating systems, including famous and rather expensive ones. Feel free to decide whether they are worth your time and money. Task: Spot the problems in <a href="https://www.amazon.com/Real-Time-Systems-Design-Analysis-Practitioner-ebook/dp/B0062LNOCW">here</a>, <a href="https://www.amazon.co.uk/Real-Time-Concepts-Embedded-Systems-Qing/dp/1578201241">here</a>, <a href="https://www.amazon.co.uk/Real-Time-Systems-Jane-W-Liu/dp/0130996513">here</a>, <a href="https://www.springer.com/gp/book/9780792392118">here</a> and <a href="https://www.os-book.com/OS9/">here</a>! Alternatively, you can look at the quotes and pointers in our <a href="https://urbanchr.github.io/Publications/pip.pdf">paper</a>. A notable exception is the <a href="https://www.springer.com/gp/book/9781461406754">textbook</a> by Buttazzo, who gives the correct specification. Unfortunately, his work did not help us with proving the correctness of the priority inheritance protocol. This is joint work with Prof. Xingyuan Zhang and his student Chunhan Wu from the PLA University of Science and Technology in Nanjing.</p>
+        </div>
+
+        <div class="card">
+          <h2>Myhill-Nerode and Regular Expressions</h2>
+          <p>Out of frustration of having to teach reasoning in theorem provers with worn-out examples like fib and even/odd, we implemented a large part of regular language theory in Isabelle/HOL. This <a href="https://www.isa-afp.org/entries/Myhill-Nerode.html">implementation</a> gives rise to much more interesting examples, as shown <a href="https://www.cs.cmu.edu/~rwh/papers/regexp/jfp.pdf">here</a> and <a href="https://ropas.snu.ac.kr/~kwang/paper/06-jfp-yi.pdf">here</a>. It turns out that formalisations of automata theory are a huge <a href="https://lists.cam.ac.uk/sympa/arc/cl-isabelle-users/2005-09/msg00013.html">pain</a> in theorem provers, especially in those that are based on HOL. We therefore went against the <a href="https://www.cs.cornell.edu/~kozen/papers/papers_by_year.htm#K97a">mainstream</a> and used in our formalisation regular expressions exclusively, because they are much more convenient for formal reasoning. The results we formalised include: the Myhill-Nerode theorem, the closure of regular languages under complementation, finiteness of derivatives of regular expressions and a surprising result about Subseq, which according to this <a href="https://blog.computationalcomplexity.org/2006/01/theorem-that-should-be-better-known.html">blog</a> should be better known. We also answered a <a href="https://blog.computationalcomplexity.org/2013/02/proving-dfa-langs-closed-under-concat.html">question</a> from the same blog about &ldquo;proving Reg-exp-langs [being] closed under complementation without using equiv to DFA&rsquo;s&rdquo; &hellip; yes we can! This is joint work with Prof. Xingyuan Zhang and his student Chunhan Wu from the PLA University of Science and Technology in Nanjing. My funding for this work came from the <a href="https://www.dfg.de/en/about-us/international-cooperation/dfg-abroad/beijing">Chinese-German Research Centre</a>.</p>
+        </div>
+
+        <div class="card">
+          <h2>Nominal Unification and Alpha-Prolog</h2>
+          <p><a href="https://urbanchr.github.io/Unification">Nominal unification</a> is one outcome of my involvement in the nominal logic project in Cambridge. Another is the logic programming language alpha-Prolog (joint work with <a href="https://homepages.inf.ed.ac.uk/jcheney/">Dr James Cheney</a>), which uses nominal unification &mdash; click for details <a href="https://homepages.inf.ed.ac.uk/jcheney/programs/aprolog/">here</a>. The nominal unification algorithm has been <a href="https://urbanchr.github.io/Unification">formally verified</a> in Isabelle. This was possible since this unification algorithm is formulated in a simple first-order language (unlike other algorithms for higher-order unification). <a href="https://www.kcl.ac.uk/people/maribel-fernandez">Prof. Maribel Fernandez</a> and her student improved the nominal unification algorithm to be quadratic. <a href="https://en.wikipedia.org/wiki/Daniel_P._Friedman">Prof. Daniel Friedman</a> and his group use nominal unification in their alpha-Kanren system implemented in Scheme. This work has also found its way into <a href="https://clojure.org">Clojure</a> as the <a href="https://github.com/clojure/core.logic/wiki/core.logic.nominal">core.logic.nominal</a> package. My funding for this work was provided through a research fellowship from <a href="https://www.corpus.cam.ac.uk">Corpus Christi College</a>, Cambridge.</p><strong>Update:</strong> Recently, the original correctness proof in Isabelle was updated and improved by a team at Universidade de Brasília and King's College London. It is now part of the <a href="https://www.isa-afp.org/entries/Nominal_Unification.html">Archive of Formal Proofs</a>. 
+        </div>
+
+        <div class="card">
+          <h2>Classical Logic</h2>
+          <p>I was Ph.D. student in the University of Cambridge <a href="https://www.cl.cam.ac.uk">Computer Laboratory</a> and for three years called Gonville and Caius College my home. I was very lucky to have <a href="https://labs.oracle.com/pls/apex/f?p=labs:bio:0:2044">Dr Gavin Bierman</a> as supervisor. My research in Cambridge was also very much influenced by <a href="https://en.wikipedia.org/wiki/Martin_Hyland">Prof. Martin Hyland</a>. Some details on my thesis &ldquo;Classical Logic and Computation&rdquo; are <a href="https://urbanchr.github.io/PhD/index.html">elsewhere</a>, including a <a href="https://urbanchr.github.io/Cut/cutapplet.html">Java Applet</a> that &lsquo;visualises&rsquo; some of the results from the thesis. I completed the writing of the thesis in <a href="https://www.i2m.univ-amu.fr/equipes-scientifiques/groupe-arithmetique-geometrie-logique-et-representations-aglr/equipe-logique-de-la-programmation-ldp/">Marseille</a> in the group of <a href="https://girard.perso.math.cnrs.fr/Accueil.html">Prof. Jean-Yves Girard</a>. My study in Cambridge was funded by two <a href="https://www.daad.de/index.html">scholarships</a> from the German government; my year in Marseille by a TMR-fellowship from the EU. My PhD was also one starting point for the EPSRC Project on the Semantics of Classical Proofs. The strong normalisation result in the PhD has been used in 2007 by <a href="https://jao2015.sciencesconf.org/conference/jao2015/pages/Claude_Kirchner.pdf">Prof. Claude Kirchner</a> and his students for proving consistency of their superdeduction system lemuridae.</p>
+        </div>
+
+        <div class="card">
+          <h2>Forum</h2>
+          <p>I implemented Forum, a programming language based on classical linear logic, as my M.Phil. thesis. This was joint work with <a href="https://st-andrews.academia.edu/RoyDyckhoff">Dr Roy Dyckhoff</a>. Details can be found <a href="https://rd.host.cs.st-andrews.ac.uk/logic/nonmac/">here</a> and <a href="https://www.lix.polytechnique.fr/Labo/Dale.Miller/forum/">here</a>. During my M.Phil study I spent one month in Philadelphia invited by <a href="https://www.lix.polytechnique.fr/~dale/">Prof. Dale Miller</a>.</p>
+        </div>
+
+        <div class="card">
+          <h2>G4ip</h2>
+          <p>An implementation of G4ip using the imperative language Pizza can be found <a href="https://urbanchr.github.io/Prover/index.html">here</a>. <a href="https://pizzacompiler.sourceforge.net">Pizza</a>, written around 1996, is a conservative extension of Java and a precursor of Scala. My implementation illustrates the technique of success continuations in proof search.</p>
+          <p><strong>Update:</strong> This ancient work inspired <a href="https://rosien.net/">Adam Rosien</a> to re-surrect some parts of it in <a href="https://github.com/arosien/sequentish/blob/master/src/main/scala/net/rosien/sequentish/LJT.scala">Scala</a> (<a href="https://github.com/arosien/sequentish">github</a>, <a href="https://arosien.github.io/sequentish/slides.html#/">slides</a>)</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
